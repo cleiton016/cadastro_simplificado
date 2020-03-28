@@ -1,0 +1,31 @@
+<nav class="nav bg-dark text-light" style="height: 60px;">
+    <ul class="nav">
+        <li class="nav-item">
+          <h3 class="nav-link">Cadastro simplificado</h3>
+        </li>
+    </ul>
+</nav>
+<div class="container mt-2">
+    <form ngForm name='cadastro'>
+        <div class="form-group">
+        <input type="text" [(ngModel)]= 'pessoa' name ='pessoa' class="form-control" placeholder="Nome">
+        <small class="form-text text-muted">Ex: Nome da tarefa em dia/mes/ano</small>
+        </div>
+        <button class="btn btn-primary" (click)="adicionar()">Salvar</button>
+    </form>
+
+<!-- Listagem de Pessoas -->
+
+<table class="table table-striped mt-3 text-center">
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+      </tr>
+    </thead>
+    <tbody id="lista" class="text-center">
+      <tr *ngFor="let item of lista">
+        <th >{{ item }}</th>
+      </tr>
+    </tbody>
+  </table>
+</div>
